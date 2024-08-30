@@ -1,0 +1,163 @@
+/*we need to apply css properties to the navbar by writng code here*/
+
+  .navbar{
+    display:flex; /*alligned*/
+    justify-content: space-around;/*space between the icons */
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px black;
+    background-color: rgb(201, 232, 23);
+  }
+  .nav-logo{/*nav-logo valla the text ONLINE SHOPPER came to the side of the logo*/
+    align-items:center;
+    display: flex;
+    gap: 10px;
+  }
+
+  .nav-logo p{  /*the changes we make here will effect the ONLINE SHOPPER */
+    color: #171717;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .nav-menu{  /*this changes the names of shop men women kids*/
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #0918e6;
+    list-style: none;
+    gap: 40px;
+    font-weight: 500;
+  }
+
+  .nav-menu li{ /**change the properties of list*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    gap: 3px;
+    
+  }
+
+  
+.nav-menu hr{ /*the line below shop*/
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: red ;
+
+}
+
+.nav-login-cart{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.nav-login-cart button{
+    height: 50px;
+    width: 130px;
+    outline: none;
+    border: 1px solid #05e5e9; /*round line around the login button*/
+    border-radius: 60px;
+    color: #4a4848;
+    font-size: 15px;
+    font-weight: 500;
+    background: rgb(247, 248, 247);
+    cursor: pointer;
+}
+
+.nav-login-cart button:active{
+  background: white;
+}
+ 
+.nav-cart-count{  
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -55px;
+  margin-top: -35px;
+  border-radius: 11px;
+  font-size: 14px;
+  background: red;
+  color: white;
+}
+.nav-dropdown {
+  display: none;
+}
+
+
+@media(max-width:900px){
+  .nav{
+      padding: 15px 40px;
+  }
+  .nav-menu{
+      gap: 15px;
+  }
+}
+
+@media(max-width:750px){
+  .nav{
+      padding: 15px 20px;
+  }
+  .nav-login-cart{
+      gap: 15px;
+  }
+  .nav-dropdown{
+      display: block;
+      width: 30px;
+      rotate: -90deg;
+      transition: 0.5s;
+  } 
+  .nav-menu{
+      display: none;
+      height: 80px;
+      width: 100%;
+      position: absolute;
+      background-color: rgb(201, 232, 23);;
+      justify-content: center;
+      top: 60px;
+      left: 0;
+
+  }
+  .nav-menu-visible{
+      display: flex;
+  }
+  .nav-dropdown.open{
+      transform: rotate(90deg);
+      background-color: rgb(201, 232, 23);
+
+  }
+  .nav-cart-count{
+      margin-left: -25px;
+  }
+}
+
+@media(max-width:500px){
+  .nav{
+      padding: 15px 15px;
+  }
+
+  .nav-logo img{
+      width: 30px;
+  }
+  .nav-logo p{
+      font-size: 18px;
+  }
+  .nav-menu-visible{
+      height: 70px;
+      top: 60px;
+  }
+  .nav-login-cart{
+      transform: scale(0.8);
+  } 
+  .nav-login-cart{
+      gap: 10px;
+  }
+}
+
+

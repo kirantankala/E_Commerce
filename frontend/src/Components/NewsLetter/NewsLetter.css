@@ -24,35 +24,39 @@
     font-size: 18px;
 }
 
-.newsletter div{/*background of subpart of newsletter which is the input of email*/
+.newsletter div{/*container: one contiguous bar, rounded only on outer edges*/
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: white;
+    align-items: stretch;
     width: 95%;
     max-width: 650px;
     height: 60px;
     border-radius: 80px;
-    border: 1px solid #e3e3e3;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 }
 
 .newsletter input{
     flex: 1;
-    padding-left: 30px;
+    min-width: 0;
+    padding: 0 24px;
     border: none;
     outline: none;
-    color: #616161;
-    font-family: Poppins;
+    background: #f5f8fa;
+    color: #1a1a1a;
+    font-family: Poppins, sans-serif;
     font-size: 16px;
 }
 
 .newsletter div button{
     width: 180px;
-    height: 60px;
-    border-radius: 80px;
-    background: black;
-    color: white;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 0;
+    background: #000;
+    color: #fff;
+    font-family: Poppins, sans-serif;
     font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
 }
 
@@ -75,14 +79,13 @@
         width: 95%;
         height: 50px;
         margin-top: 10px;
+        border-radius: 50px;
    }
    .newsletter input{
-        padding-left: 20px;
+        padding: 0 16px;
     }
     .newsletter div button{
         width: 100px;
-        height: 50px;
-        border-radius: 25px;
         font-size: 14px;
     }
 }

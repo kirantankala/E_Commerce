@@ -11,7 +11,7 @@ const [popularProducts,setPopularProducts]=useState([]);
   },[])
 
   return (
-    <div className='popular'>
+    <div className={`popular ${popularProducts.length ? 'popular--has-products' : ''}`}>
          <h1>POPULAR IN WOMEN</h1>
           <hr/>
        <div className="popular-item">
